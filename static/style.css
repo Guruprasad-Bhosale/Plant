@@ -1,0 +1,221 @@
+/* Root Variables for Themes */
+:root {
+    --primary-color: #4CAF50;
+    --secondary-color: #f0f8ff;
+    --text-color: #333;
+    --background-color: #fff;
+  }
+  
+  body.dark-mode {
+    --primary-color: #333;
+    --secondary-color: #121212;
+    --text-color: #f0f8ff;
+    --background-color: #1e1e1e;
+  }
+  
+  /* General Styles */
+  body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  /* Navigation Bar */
+  nav {
+    background-color: var(--primary-color);
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  
+  nav ul li a:hover {
+    color: #000;
+  }
+  
+  /* Dark/Light Mode Toggle */
+  .toggle-switch {
+    cursor: pointer;
+    /* Styling for toggle switch */
+  }
+  
+  /* Home Page */
+  header {
+    text-align: center;
+    padding: 50px 20px;
+  }
+  
+  .plant-gallery .grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .grid-item img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s;
+  }
+  
+  .grid-item img:hover {
+    transform: scale(1.05);
+  }
+  
+  /* About Page */
+  .about-section {
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .profile-card-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+  
+  .profile-card {
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 250px;
+    padding: 20px;
+    transition: transform 0.3s;
+  }
+  
+  .profile-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .profile-card img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+  }
+  
+  .profile-card h2 {
+    margin-top: 15px;
+    color: var(--primary-color);
+  }
+  
+  .profile-card p {
+    font-size: 14px;
+    color: var(--text-color);
+  }
+  
+  .profile-card a {
+    display: inline-block;
+    margin-top: 10px;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .profile-card a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Scan Page */
+  .scan-section {
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .scan-section form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .scan-section form input {
+    margin: 15px 0;
+    padding: 10px;
+    width: 80%;
+    max-width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .scan-section form button {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .scan-section form button:hover {
+    background-color: darken(var(--primary-color), 10%);
+  }
+  
+  /* Results Page */
+  .results-section {
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .result-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .user-image img {
+    width: 300px;
+    border-radius: 10px;
+  }
+  
+  .additional-images {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .additional-images img {
+    width: 100px;
+    border-radius: 5px;
+  }
+  
+  .plant-info {
+    max-width: 600px;
+    text-align: left;
+  }
+  
+  .plant-info h2 {
+    color: var(--primary-color);
+  }
+  
+  .plant-info p {
+    margin: 10px 0;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .profile-card-container {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .additional-images {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  
